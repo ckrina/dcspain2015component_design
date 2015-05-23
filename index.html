@@ -48,20 +48,22 @@
 
         <!-- 2. Presentation -->
         <section>
-          <p>Cristina Chumillas</p>
+          <h2>Cristina Chumillas</h2>
           <p>
-            <small><a href="http://twitter.com/chumillas">@chumillas</a> / <a href="https://www.drupal.org/u/ckrina">ckrina</a></small>
+            <a href="http://twitter.com/chumillas">@chumillas</a> / <a href="https://www.drupal.org/u/ckrina">ckrina</a>
           </p>
-          <p><small>Designer and frontend developer at Ymbra</small></p>
+          <p>Designer and frontend developer at Ymbra</p>
+          <p><img src="images/logo_ymbra.png" style="border:none; box-shadow:none; background-color: transparent;" />
         </section>
 
         <!-- 3. Index -->
         <section>
           <h2>What are we going to talk about</h2>
           <ul>
+            <li>Components</li>
+            <li>CSS Methodologies</li>
             <li>Design Systems</li>
             <li>Styles Guides</li>
-            <li>CSS Methodologies</li>
             <li>In Drupal</li>
           </ul>
         </section>
@@ -76,28 +78,116 @@
           </section>
 
           <section data-background="images/maintenance.png">
+            <aside class="notes">
+            <p>Lifetime of a project</p>
+          </aside>
           </section>
 
           <section data-background="images/delirables.png">
-          <!--
-            HTML design prototype
-            If we're not delivering designs in PS, what do we deliver?
-            Clients wants PS because they’re used to it.
-            Create HTML CSS, and maybe a bit of JS
-          -->
+          <aside class="notes">
+            <p>Clients wants PS because <strong>they’re used to it</strong>.</p>
+          </aside>
+          </section>
+        </section>
+
+        <!-- 5. Components -->
+        <section>
+          <section>
+            <h1>Components</h1>
+            <aside class="notes">
+              <h2>How can we improve it?</h2>
+            </aside>
+          </section>
+
+          <section data-background="images/component-01.png">
+            <aside class="notes">
+              <h2>What is a component?</h2>
+              <p>Independent entity with its own meaning</p>
+            </aside>
+          </section>
+
+          <section data-background="images/component-02.png">
+          </section>
+
+          <section data-background="images/component-03.png">
+          </section>
+
+          <section>
+            <img src="images/component-04.png" /></td>
+          </section>
+          <section>
+            <img src="images/component-05.png" width="450" />
           </section>
 
         </section>
 
-        <!-- 5. Design Systems Intro-->
+        <!-- 7. CSS Methodologies -->
         <section>
           <section>
-            <h1>Design systems</h1>
-            <!-- Design Systems are all the rage in the design world -->
+            <h1>CSS Methodologies</h1>
+            <aside class="notes">
+              <p>BEM SMACSS, OOCss</p>
+              <p>Methodologies for scalable maintainable frontend code</p>
+            </aside>
           </section>
 
           <section>
-            <p>Everything that makes up your product.</p>
+            <h2>BEM</h2>
+            <small>(Block Element Modifier)</small>
+            <pre><code style="word-wrap: break-word;">
+              &lt;div class="block__wrapper"&gt;
+                &lt;div class="block"&gt;
+                  &lt;h2 class="block__title"&gt;Block title&lt;/h2&gt;
+                  &lt;p class="block__text"&gt;Block text&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code></pre>
+            <aside class="notes"><strong>It's a naming methodology</strong></aside>
+          </section>
+
+          <section>
+            <h2>BEM</h2>
+            <small>(Block Element Modifier)</small>
+            <pre><code style="word-wrap: break-word;">
+                &lt;div class="block--big"&gt;
+                  &lt;h2 class="block__title"&gt;Block title&lt;/h2&gt;
+                  &lt;p class="block__text"&gt;Block text&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+          </section>
+
+         <section>
+            <h2>SMACSS</h2>
+            <ul>
+              <li>Base</li>
+              <li>Layout</li>
+              <li>Module (Components)</li>
+              <li>State</li>
+              <li>Theme</li>
+            </ul>
+            <aside class="notes">It is more like a “style guide” than a rigid CSS framework</aside>
+          </section>
+
+          <section>
+            <h2>SMACSS</h2>
+            <img src="images/smacss-structure.png" />
+          </section>
+        </section>
+
+        <!-- 6. Design Systems -->
+        <section>
+          <section>
+            <h1>Design systems</h1>
+            <aside class="notes">
+              Design Systems <strong>are all the rage</strong> in the design world
+            </aside>
+          </section>
+
+          <section>
+            <blockquote cite="http://bradfrost.com/blog/mobile/bdconf-stephen-hay-presents-responsive-design-workflow/">
+              Everything that makes up your product.
+            </blockquote>
+            <p>--Mark Otto, FOWA 2013</p>
             <p class="fragment">Everything.</p>
             <p class="fragment">
               <small>Typography, layouts and grids, colors, icons, components, coding conventions</small>
@@ -126,22 +216,9 @@
             <p class="fragment">Everybody knows how everything works</p>
             <p class="fragment">Integrates multi-disciplinary workflow</p>
           </section>
-
-          <section>
-            <h2>What is a component?</h2>
-            <p>Independent entity with its own meaning</p>
-            <pre><code style="word-wrap: break-word;">
-              &lt;div class="block__wrapper"&gt;
-                &lt;div class="mainmenu"&gt;
-                  &lt;ul class="mainmenu__text"&gt;Block text&lt;/p&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            </code></pre>
-          </section>
-
         </section>
 
-        <!-- 6. Card Design Methodologie -->
+        <!-- 7. Card Design Methodologies -->
         <section>
           <section>
             <h2>Card Design</h2>
@@ -151,12 +228,22 @@
           </section>
         </section>
 
-        <!-- 7. Atomic design Methodologie -->
+        <!-- 8. Atomic design Methodologie -->
         <section>
           <section >
-            <h2>Atomic design</h2>
-            <!-- Atomic design is methodology for creating design systems. -->
+            <h1>Atomic design</h1>
+            <aside class="notes">
+            Atomic design <strong>is methodology for creating design systems</strong>.
+            </aside>
+
+          </section>
+          <section >
+            <h2><a href="http://bradfrost.com/blog/post/atomic-web-design/">Brad Frost</a></h2>
+            <aside class="notes">
+            Atomic design <strong>is methodology for creating design systems</strong>.
+            </aside>
             <img src="images/atomic-design.png" />
+
           </section>
 
           <section data-background="images/atomic1.png">
@@ -171,14 +258,17 @@
           <section data-background="images/atomic4.png">
           </section>
 
-          <section data-background="images/atomic5.png">
+          <section>
+            <img src="images/atomic5.png" />
           </section>
         </section>
 
-        <!-- 8. Workflow -->
+        <!-- 9. Workflow -->
         <section>
-        <h1>When?</h1>
-        <!-- when should we introduce it in our workflow -->
+          <h1>When?</h1>
+          <aside class="notes">
+            <strong>When</strong> should we introduce it in our workflow.
+          </aside>
         </section>
 
         <section>
@@ -206,14 +296,7 @@
               <li>They lay the foundation for the final product</li>
             <ul>
           </section>
-           <section>
-            <h2>HTML Wireframes</h2>
-            <p>http://getwirefy.com</p>
-            <p>http://getskeleton.com</p>
-          </section>
-        </section>
 
-        <section>
           <!-- 10. Designing in the browser -->
           <section>
             <h2>Designing in the browser</h2>
@@ -224,6 +307,7 @@
               <li>Reusable work</li>
             </ul>
           </section>
+
         </section>
 
         <!-- 11. Style Guides -->
@@ -232,8 +316,11 @@
           <section>
             <h1>Style Guides</h1>
             <p class="fragment">Documentation of a Design System</p>
-            <!-- At the begining: PDF -->
-            <!-- Visualizes your code and represents it as a UI component toolkit -->
+            <aside class="notes">
+              <h2>If not in previous steps, HERE!</h2>
+              At the begining: PDF<br>
+              Visualizes your code and represents it as a UI component toolkit
+            </aside>
           </section>
 
           <section data-background="images/style-guide-colors.png">
@@ -243,12 +330,14 @@
             <h2>Why?</h2>
             <ul>
               <li>Improve User Experience</li>
-              <!-- Links, buttons and call to actions on your site should all be styled or displayed consistently. If a user clicks on a button and get served up a modal or lightbox, ideally they should get that same experience across the site.-->
               <li>Easy onboarding of new team members</li>
               <li>Efficient Design and Development</li>
-              <!-- With detailed wireframes and a front-end style guide, we could hopefully spend less time in Photoshop and use that time to focus on interactions or the overall experience of the site.-->
               <li>Makes Testing easier</li>
             </ul>
+            <aside class="notes">
+              <p><strong>Improve User Experience</strong>Links, buttons and call to actions on your site should all be styled or displayed consistently. If a user clicks on a button and get served up a modal or lightbox, ideally they should get that same experience across the site.</p>
+              <p><strong>Efficient Design and Development</strong>With detailed wireframes and a front-end style guide, we could hopefully spend less time in Photoshop and use that time to focus on interactions or the overall experience of the site.</p>
+            </aside>
           </section>
 
           <section data-background="images/style-guide-workflow-01.png">
@@ -258,66 +347,35 @@
           </section>
 
           <section data-background="images/style-guide-workflow-03.png">
-            <!-- Out of date Style Guides are useless -->
+            <aside class="notes">
+              <p>Out of date Style Guides are useless.</p>
+            </aside>
           </section>
 
           <section>
             <h2>Styleguide Driven Development(SDD)</h2>
             <p>Style guides that are generated directly from the style definition sources</p>
-            <!-- Is a practice that encourages the separation of UX, Design & Frontend from Backend concerns. This is achieved by developing the UI separately in a styleguide.-->
-            <!-- By separating the UI and backend tasks so they don’t rely on each other, it allows teams to iterate fast on prototypes and designs without having to make changes to the backend. With careful planning they should plug-and-play together nicely.-->
+             <aside class="notes">
+              <p>Is a practice that encourages the separation of UX, Design & Frontend from Backend concerns. This is achieved by developing the UI separately in a styleguide.</p>
+              <p>By separating the UI and backend tasks so they don’t rely on each other, it allows teams to iterate fast on prototypes and designs without having to make changes to the backend. With careful planning they should plug-and-play together nicely.</p>
+            </aside>
           </section>
 
           <section>
             <h2>Style Guides</h2>
             <p><a href="https://www.drupal.org/project/styleguide">Drupal Style Guide module</a></p>
-            <p>KSS (Knyle Style Sheets)</p>
-            <p>Zen 6</p>
-            <p>Pattern Lab</p>
+            <p><a href="http://warpspire.com/kss/">KSS (Knyle Style Sheets)</a> <a href="https://www.drupal.org/project/zen">(Zen 6)</a></p>
+            <p><a href="patternlab.io">Pattern Lab</a></p>
+          </section>
+
+          <section>
+            <h2>Style Guides - resources</h2>
+            <p><a href="http://styleguides.io/">styleguides.io</a></p>
+            <p>Articles, Books, Podcasts, Talks, Tools, Examples, etc.</p>
           </section>
         </section>
 
-        <!-- 13. CSS Methodologies -->
-        <section>
-          <section>
-            <h2>CSS Methodologies</h2>
-            <p>Intro</p>
-            <p>Abstraction</p>
-            <p>Use patterns</p>
-
-          </section>
-
-          <section>
-            <h2>CSS Methodologies</h2>
-            <p>BEM (Block Element Modifier)</p>
-            <pre><code style="word-wrap: break-word;">
-              &lt;div class="block__wrapper"&gt;
-                &lt;div class="block"&gt;
-                  &lt;h2 class="block__title"&gt;Block title&lt;/h2&gt;
-                  &lt;p class="block__text"&gt;Block text&lt;/p&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            </code></pre>
-          </section>
-
-          <section>
-            <h2>CSS Methodologies</h2>
-            <p>BEM (Block Element Modifier)</p>
-            <pre><code style="word-wrap: break-word;">
-                &lt;div class="block--big"&gt;
-                  &lt;h2 class="block__title"&gt;Block title&lt;/h2&gt;
-                  &lt;p class="block__text"&gt;Block text&lt;/p&gt;
-                &lt;/div&gt;
-            </code></pre>
-          </section>
-
-          <section data-background="images/smacss-structure.png">
-            <h2>CSS Methodologies</h2>
-            <p>SMACSS</p>
-          </section>
-        </section>
-
-        <!-- 14. In Drupal -->
+        <!-- 13. In Drupal -->
         <section>
           <section>
             <h1>In Drupal</h1>
@@ -325,35 +383,52 @@
 
             <!--- Design systems can align with Drupal objects.</p>-->
             <!-- Can take this approach with existing designs -->
-            <p>First step - draw boxes around elements.</p>
-            <p>Define them in a drupal agnostic way. Later align them with Drupal elements.</p>
+            <!--<p>First step - draw boxes around elements.</p>
+            <p>Define them in a drupal agnostic way. Later align them with Drupal elements.</p>-->
+            <aside class="notes">How we dot it in Drupal</aside>
           </section>
           <section>
-            <p>Drupal style guide module https://www.drupal.org/node/1869732</p>
+            <h2>Adapt to agnostic Style Guides</h2>
+            <ol>
+              <li>Wrapping components</li>
+              <li>Changing default markup</li>
+            </ol>
           </section>
 
           <section>
             <h3>UI components to Drupal components</h3>
+            <h2>Coding</h2>
             <ul>
               <li>Field formatter</li>
-              <li>Display Suite
-                <ul>
-                  <li>View modes</li>
-                  <li>Field templates</li>
-                </ul>
-              </li>
-              <li>Panels
-                <ul>
-                  <li>Custom Panes</li>
-                  <li>Mini Panels</li>
-                  <li>Context</li>
-                </ul>
-              </li>
+              <li><code>hook_alter</code></li>
+              <li>Process and preprocess functions</li>
+              <li>...</li>
             </ul>
+          </section>
+          <section>
+            <h3>UI components to Drupal components</h3>
+            <h2>Display Suite</h2>
+            <p>View modes</p>
+            <img src="images/ds-layouts.png" />
+          </section>
+          <section>
+            <h3>UI components to Drupal components</h3>
+            <h2>Display Suite</h2>
+            <p>Field templates</p>
+            <img src="images/ds-fields.png" />
+          </section>
+          <section>
+            <h3>UI components to Drupal components</h3>
+            <h2>Panels</h2>
+              <ul>
+                <li>Custom Panes</li>
+                <li>Mini Panels</li>
+                <li>Context</li>
+              </ul>
           </section>
         </section>
 
-        <!-- 14. Thanks -->
+        <!-- 15. Thanks -->
         <section>
           <h1>Thanks!</h1>
           <p>
