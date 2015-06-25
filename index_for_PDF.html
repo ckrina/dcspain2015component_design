@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/theme/drupal.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,8 +42,7 @@
 
         <!-- 1. Title -->
         <section>
-          <h1>Component Based</h1>
-          <h3>Design and Development</h3>
+          <img class="custom-logo" src="images/drupal_8_logo-01.png" />
         </section>
 
         <!-- 2. Presentation -->
@@ -53,389 +52,138 @@
             <a href="http://twitter.com/chumillas">@chumillas</a> / <a href="https://www.drupal.org/u/ckrina">ckrina</a>
           </p>
           <p>Designer and frontend developer at Ymbra</p>
-          <p><img src="images/logo_ymbra.png" style="border:none; box-shadow:none; background-color: transparent;" />
+          <p><img class="no-style" src="images/logo_ymbra.png" />
         </section>
-
-        <!-- 3. Index -->
-        <section>
-          <h2>What are we going to talk about</h2>
-          <ul>
-            <li>Components</li>
-            <li>CSS Methodologies</li>
-            <li>Design Systems</li>
-            <li>Styles Guides</li>
-            <li>In Drupal</li>
-          </ul>
-        </section>
-
 
         <section>
-            <h1>Web projects</h1>
-          </section>
-
-        <section data-background="images/waterfall-vs-agile.png">
+          <h2>Drupal</h2>
         </section>
 
-        <section data-background="images/maintenance.png">
-        </section>
-
-        <section data-background="images/delirables.png">
-        </section>
-
-
-        <!-- 5. Components -->
+        <!-- 3. Drupal 8 presentation -->
         <section>
-          <section>
-            <h1>Components</h1>
-            <aside class="notes">
-              <h2>How can we improve it?</h2>
-            </aside>
-          </section>
-
-          <section data-background="images/component-01.png">
-            <aside class="notes">
-              <h2>What is a component?</h2>
-              <p>Independent entity with its own meaning</p>
-            </aside>
-          </section>
-
-          <section data-background="images/component-02.png">
-          </section>
-
-          <section data-background="images/component-03.png">
-          </section>
-
-          <section>
-            <img src="images/component-04.png" /></td>
-          </section>
-          <section>
-            <img src="images/component-05.png" width="450" />
-          </section>
-
+          <img class="no-style" src="images/drupal_8_logo-02.png" />
         </section>
 
-        <!-- 7. CSS Methodologies -->
         <section>
-          <section>
-            <h1>CSS Methodologies</h1>
-            <aside class="notes">
-              <p>BEM SMACSS, OOCss</p>
-              <p>Methodologies for scalable maintainable frontend code</p>
-            </aside>
-          </section>
+          <h2>Drupal timeline</h2>
+          <img class="no-style" src="images/drupal8timeline.png" />
+        </section>
 
-           <section>
-            <h2>BEM</h2>
-            <small>(Block Element Modifier)</small>
-            <pre><code style="word-wrap: break-word;">
-                .site-search {}        /* Block */
-                .site-search__field {} /* Element */
-                .site-search--full {}  /* Modifier */
-            </code></pre>
-            <aside class="notes">
-              <h2>It's a naming methodology</h2>
-              <p>underscore / dash</p>
-              <h2>1. Abstractions</h2>
-            </aside>
-          </section>
+        <section>
+          <h2>Drupal 8.1</h2>
+          <img class="no-style" src="images/Semver.jpg" />
+        </section>
 
-          <section>
-            <h2>BEM</h2>
-            <small>(Block Element Modifier)</small>
-            <pre><code style="word-wrap: break-word;">
-              &lt;div class="block-name__wrapper"&gt;
-                &lt;div class="block-name"&gt;
-                  &lt;h2 class="block-name__title"&gt;Block title&lt;/h2&gt;
-                  &lt;p class="block-name__text"&gt;Block text&lt;/p&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-            </code></pre>
-          </section>
+        <!-- 3. Drupal presentation -->
+        <section>
+          <h1>Mobile First</h1>
+        </section>
+        <section>
+          <h2>Tractament responsive a tots els elements</h2>
+          <p>Themes, imatges, taules…</p>
+          <img src="images/taula-responsive.gif" />
+        </section>
 
-          <section>
-            <h2>BEM</h2>
-            <small>(Block Element Modifier)</small>
-            <pre><code style="word-wrap: break-word;">
-                &lt;div class="block-name--big"&gt;
-                  &lt;h2 class="block-name__title"&gt;Block title&lt;/h2&gt;
-                  &lt;p class="block-name__text"&gt;Block text&lt;/p&gt;
-                &lt;/div&gt;
-            </code></pre>
-          </section>
+        <section>
+          <h2>Administració</h2>
+          <img src="images/tabs-responsive.gif" />
+        </section>
+
+        <section>
+          <h2>Mobile-friendly toolbar</h2>
+          <img src="images/toolbar-responsive.gif" />
+        </section>
+
+        <section>
+          <h2>Breakpoints</h2>
+          <p><code>bartik.breakpoints.yml</code></p>
+          <pre><code>
+  bartik.mobile:
+    label: mobile
+    mediaQuery: ''
+    weight: 2
+    multipliers:
+      - 1x
+  bartik.narrow:
+    label: narrow
+    mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+    weight: 1
+    multipliers:
+      - 1x
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Responsive images</h2>
+          <img src="images/images-responsive.gif" />
+        </section>
+        <section>
+          <h2>Responsive images</h2>
+          <img src="images/images-responsive2.gif" />
+        </section>
 
          <section>
-            <h2>SMACSS</h2>
-            <ul>
-              <li>Base</li>
-              <li>Layout</li>
-              <li>Module (Components)</li>
-              <li>State</li>
-              <li>Theme</li>
-            </ul>
-            <aside class="notes">It is more like a “style guide” than a rigid CSS framework</aside>
-          </section>
+          <h2>New theme system: Twig</h2>
+          <pre><code>
+  &lt;?php
+  /**
+   * @file
+   * File description
+   */
+  ?&gt;
+          </code></pre>
 
-          <section>
-            <h2>SMACSS</h2>
-            <img src="images/smacss-structure.png" />
-          </section>
-        </section>
-
-        <!-- 6. Design Systems -->
-        <section>
-          <section>
-            <h1>Design systems</h1>
-            <aside class="notes">
-              Design Systems <strong>are all the rage</strong> in the design world
-            </aside>
-          </section>
-
-          <section>
-            <blockquote cite="http://bradfrost.com/blog/mobile/bdconf-stephen-hay-presents-responsive-design-workflow/">
-              Everything that makes up your product.
-            </blockquote>
-            <p>--Mark Otto, FOWA 2013</p>
-            <p class="fragment">Everything.</p>
-            <p class="fragment">
-              <small>Typography, layouts and grids, colors, icons, components, coding conventions</small>
-            </p>
-          </section>
-
-          <section>
-            <blockquote cite="http://bradfrost.com/blog/mobile/bdconf-stephen-hay-presents-responsive-design-workflow/">
-            &ldquo;We’re not designing pages, we’re designing systems of components.&rdquo;
-            </blockquote>
-            <p>--Stephen Hay</p>
-            <aside class="notes">
-              <h2>MAIN SLIDE</h2>
-            </aside>
-          </section>
-
-          <section>
-            <img src="images/bootstrap.png" />
-          </section>
-
-          <section data-background="images/ui_example.png">
-          </section>
-
-          <section>
-            <h2>Why Design Systems?</h2>
-            <p class="fragment">Reusable work - COMPONENTS</p>
-            <p class="fragment">More efficient projects</p>
-            <p class="fragment">Large-scale ready code</p>
-            <p class="fragment">Everybody knows how everything works</p>
-            <p class="fragment">Integrates multi-disciplinary workflow</p>
-          </section>
-        </section>
-
-        <!-- 7. Card Design Methodologies -->
-        <section>
-          <section>
-            <h2>Card Design</h2>
-          </section>
-
-          <section data-background="images/card.png">
-          </section>
-        </section>
-
-        <!-- 8. Atomic design Methodologie -->
-        <section>
-          <section >
-            <h1>Atomic design</h1>
-            <aside class="notes">
-            Atomic design <strong>is methodology for creating design systems</strong>.
-            </aside>
-
-          </section>
-          <section >
-            <h2><a href="http://bradfrost.com/blog/post/atomic-web-design/">Brad Frost</a></h2>
-            <aside class="notes">
-            Atomic design <strong>is methodology for creating design systems</strong>.
-            </aside>
-            <img src="images/atomic-design.png" />
-
-          </section>
-
-          <section data-background="images/atomic1.png">
-          </section>
-
-          <section data-background="images/atomic2.png">
-          </section>
-
-          <section data-background="images/atomic3.png">
-          </section>
-
-          <section data-background="images/atomic4.png">
-          </section>
-
-          <section>
-            <img src="images/atomic5.png" />
-          </section>
-        </section>
-
-        <!-- 9. Workflow -->
-        <section>
-          <h1>When?</h1>
-          <aside class="notes">
-            <strong>When</strong> should we introduce it in our workflow.
-          </aside>
+          <pre><code>
+  {#
+  /**
+   * @file
+   * File description
+   */
+  #}
+          </code></pre>
         </section>
 
         <section>
-          <section>
-            <h2>Wireframes</h2>
-            <p class="fragment">Static wireframes  vs  HTML Wireframes</p>
-          </section>
-          <section>
-            <h2>Static wireframes</h2>
-            <ul>
-              <li>They’re abstractions</li>
-              <li>They’re full of assumptions</li>
-              <li>They’re verbose</li>
-              <li>They’re a crutch</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>HTML Wireframes</h2>
-            <ul>
-              <li>They get into the browser quicker</li>
-              <li>They reinforce the notion that you’re creating a website </li>
-              <li>They’re interactive</li>
-              <li>They allow for living, breathing annotations</li>
-              <li>They lay the foundation for the final product</li>
-            <ul>
-          </section>
-
-          <!-- 10. Designing in the browser -->
-          <section>
-            <h2>Designing in the browser</h2>
-            <ul>
-              <li>PSD/ for early planning/research phases</li>
-              <li>The composition in the browser</li>
-              <li>Make decisions in the browser</li>
-              <li>Reusable work</li>
-            </ul>
-          </section>
-
+          <h2>Theme Responsively</h2>
+          <p>themes can now declare Breakpoints (the height, width, and resolution at which a design changes to meet shifting browsers and devices) which can be used by these various responsive features.</p>
         </section>
 
-        <!-- 11. Style Guides -->
         <section>
-
-          <section>
-            <h1>Style Guides</h1>
-            <p class="fragment">Documentation of a Design System</p>
-            <aside class="notes">
-              <h2>If not in previous steps, HERE!</h2>
-              At the begining: PDF<br>
-              Visualizes your code and represents it as a UI component toolkit
-            </aside>
-          </section>
-
-          <section data-background="images/style-guide-colors.png">
-          </section>
-
-          <section>
-            <h2>Why?</h2>
-            <ul>
-              <li>Improve User Experience</li>
-              <li>Easy onboarding of new team members</li>
-              <li>Efficient Design and Development</li>
-              <li>Makes Testing easier</li>
-            </ul>
-            <aside class="notes">
-              <p><strong>Improve User Experience</strong>Links, buttons and call to actions on your site should all be styled or displayed consistently. If a user clicks on a button and get served up a modal or lightbox, ideally they should get that same experience across the site.</p>
-              <p><strong>Efficient Design and Development</strong>With detailed wireframes and a front-end style guide, we could hopefully spend less time in Photoshop and use that time to focus on interactions or the overall experience of the site.</p>
-            </aside>
-          </section>
-
-          <section data-background="images/style-guide-workflow-01.png">
-          </section>
-
-          <section data-background="images/style-guide-workflow-02.png">
-          </section>
-
-          <section data-background="images/style-guide-workflow-03.png">
-            <aside class="notes">
-              <p>Out of date Style Guides are useless.</p>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Styleguide Driven Development(SDD)</h2>
-            <p>Style guides that are generated directly from the style definition sources</p>
-             <aside class="notes">
-              <p>Is a practice that encourages the separation of UX, Design & Frontend from Backend concerns. This is achieved by developing the UI separately in a styleguide.</p>
-              <p>By separating the UI and backend tasks so they don’t rely on each other, it allows teams to iterate fast on prototypes and designs without having to make changes to the backend. With careful planning they should plug-and-play together nicely.</p>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Style Guides</h2>
-            <p><a href="https://www.drupal.org/project/styleguide">Drupal Style Guide module</a></p>
-            <p><a href="http://warpspire.com/kss/">KSS (Knyle Style Sheets)</a> <a href="https://www.drupal.org/project/zen">(Zen 6)</a></p>
-            <p><a href="patternlab.io">Pattern Lab</a></p>
-          </section>
-
-          <section>
-            <h2>Style Guides - resources</h2>
-            <p><a href="http://styleguides.io/">styleguides.io</a></p>
-            <p>Articles, Books, Podcasts, Talks, Tools, Examples, etc.</p>
-          </section>
+          <h2>Front-end performance</h2>
+          <p>high-performance settings enabled by default.
+            One of the biggest factors that can make or break the mobile experience is the raw performance of a website. As a result, lots of work has been done in Drupal 8 to minimize its front-end footprint. For example, in many cases, jQuery was swapped out for native JavaScript, and out of the box Drupal 8 loads zero JavaScript files for anonymous visitors. Additionally, JS-intensive features such as the Overlay module have been removed in favour of lighter-weight alternatives that are mobile friendly.</p>
         </section>
 
-        <!-- 13. In Drupal -->
+
         <section>
-          <section>
-            <h1>In Drupal</h1>
+          <h2>New front-end libraries and helpers</h2>
+          <p>For example, Modernizr (which makes it easy to detect if a browser supports touch, or HTML5/CSS3 features), Underscore.js (a lightweight JS helper library), and Backbone.js (a Model-View-Controller JavaScript framework).Jquery Jquery UI</p>
+        </section>
 
+        <section>
+          <h2>HTML5</h2>
+          <p>All of Drupal's output has been converted to use semantic HTML5 markup, as opposed to XHTML in Drupal 7.
+date, tel, and email (which can provide targeted user interfaces on mobile devices (for example, only showing the number pad on phone numbers)</p>
+        </section>
 
-            <!--- Design systems can align with Drupal objects.</p>-->
-            <!-- Can take this approach with existing designs -->
-            <!--<p>First step - draw boxes around elements.</p>
-            <p>Define them in a drupal agnostic way. Later align them with Drupal elements.</p>-->
-            <aside class="notes">How we dot it in Drupal</aside>
-          </section>
-          <section>
-            <h2>Adapt to agnostic Style Guides</h2>
-            <ol>
-              <li>Wrapping components</li>
-              <li>Changing default markup</li>
-            </ol>
-          </section>
+        <section>
+          <h2>Native Schema.org output</h2>
+          <p>In a great boon for search-engine optimization, Drupal 8's RDFa module now outputs schema.org markup.</p>
+        </section>
 
-          <section>
-            <h3>UI components to Drupal components</h3>
-            <h2>Coding</h2>
-            <ul>
-              <li>Field formatter</li>
-              <li><code>hook_alter</code></li>
-              <li>Process and preprocess functions</li>
-              <li>...</li>
-            </ul>
-          </section>
-          <section>
-            <h3>UI components to Drupal components</h3>
-            <h2>Display Suite</h2>
-            <p>View modes</p>
-            <img src="images/ds-layouts.png" />
-          </section>
-          <section>
-            <h3>UI components to Drupal components</h3>
-            <h2>Display Suite</h2>
-            <p>Field templates</p>
-            <img src="images/ds-fields.png" />
-          </section>
-          <section>
-            <h3>UI components to Drupal components</h3>
-            <h2>Panels</h2>
-              <ul>
-                <li>Custom Panes</li>
-                <li>Mini Panels</li>
-                <li>Context</li>
-              </ul>
-          </section>
+        <section>
+          <h2>Even more improved Accessibility</h2>
+          <p>Drupal 8 makes extensive use of WAI-ARIA attributes to provide meaning on rich front-end applications such as the in-place editor and responsive toolbar.</p>
+        </section>
+
+        <section>
+          <h2>R.I.P. IE 6, 7, and 8</h2>
+          <p>Drupal 8 core has officially dropped support for IE 6, 7 and 8, enabling the use of jQuery 2.0 and other code that assumes modern HTML5/CSS3 browser support.</p>
+        </section>
+
+        <section>
+          <h2>In-place editing</h2>
+          <p>Enter Drupal 8's new in-place editing feature, which allows editors to easily click into any field within a piece of content and edit it right on the front-end of the site, without ever visiting the back-end form.</p>
         </section>
 
         <!-- 15. Thanks -->
